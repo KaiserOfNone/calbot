@@ -62,7 +62,6 @@ func (b *Bot) RegisterCommands(commands []Command) error {
 			Name:        bcmd.Name,
 			Description: bcmd.Description,
 		}
-		// User seems to be empty
 		cmd, err := b.session.ApplicationCommandCreate(b.session.State.User.ID, "", appcmd)
 		if err != nil {
 			return err
